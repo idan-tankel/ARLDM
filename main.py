@@ -10,7 +10,8 @@ import torch.utils.checkpoint
 from PIL import Image
 from diffusers import AutoencoderKL, DDPMScheduler, LMSDiscreteScheduler, PNDMScheduler, DDIMScheduler
 from omegaconf import DictConfig
-from pl_bolts.optimizers.lr_scheduler import LinearWarmupCosineAnnealingLR
+from flash.core.optimizers import LinearWarmupCosineAnnealingLR
+# from pl_bolts.optimizers.lr_scheduler import LinearWarmupCosineAnnealingLR
 from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.strategies import DDPStrategy
